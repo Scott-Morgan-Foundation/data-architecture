@@ -1,0 +1,49 @@
+{
+    "info": {
+      "copyright": "copyright 2022 Scott-Morgan Foundation",
+      "license": "BSD-3-Clause",
+      "title": "SMF Smart HVAC",
+      "version": "2022-03-02"
+    },
+  "namespace": {
+    "smf": "https://www.scottmorganfoundation.org/highcliff"
+  },
+  "defaultNamespace": "smf",
+    "sdfThing": {
+      "smart-hvac": {
+        "description": "This is an example of possible design for an HVAC system.",
+        "sdfObject": {
+          "ac-actuator": {
+            "sdfRef": "oma:#/sdfObject/Actuation"
+          },
+          "thermostat": {
+            "sdfRef": "#/sdfObject/Thermostat"
+          },
+          "sensor": {
+            "sdfRef": "oma:#/sdfObject/Generic_Sensor"
+          }
+        }
+      }
+    },
+    "sdfObject": {
+      "Thermostat": {
+        "sdfProperty": {
+          "set-temp": {
+            "label": "Set Temp",
+            "type": "number"
+          },
+          "current-temp": {
+            "label": "Current Temp",  
+            "type": "number",
+            "writable": false
+          },
+          "temp-unit": {
+            "label": "Temp Unit",
+            "description": "Temperature Measurement Units Definition.",
+            "writable": false,
+            "type": "string"
+        }
+      }
+    }
+  }
+}
